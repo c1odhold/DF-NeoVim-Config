@@ -3,7 +3,6 @@ return {
   cmd = "TagbarToggle", -- 按需加载
   config = function()
     vim.g.tagbar_width = 35
-    vim.g.tagbar_left = 1 -- 左侧显示
     vim.g.tagbar_autofocus = 1
     vim.g.tagbar_sort = 0
     vim.g.tagbar_compact = 1
