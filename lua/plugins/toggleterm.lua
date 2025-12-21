@@ -14,18 +14,6 @@ return {
       terminal_mappings = true,
       insert_mappings = true,
       open_mapping = [[<F12>]],
-      on_open = function(term)
-        local ok, conf = pcall(vim.api.nvim_win_get_config, term.window)
-        local shell = vim.fn.fnamemodify(vim.o.shell, ":t")
-        local cwd = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
-        local title = string.format("  %s — %s ", shell, cwd)
-        if ok and conf and conf.relative then
-          vim.api.nvim_win_set_config(term.window, {
-            title = title,
-            title_pos = "center",
-          })
-        end
-      end,
       highlights = {
         FloatBorder = { guifg = "#61afef" },
       },
