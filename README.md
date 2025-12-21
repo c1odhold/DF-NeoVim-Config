@@ -14,11 +14,6 @@ Firstly make sure you have installed nmp and ctags
 sudo pacman npm ctags
 ```
 
-- Ubuntu
-```
-sudo apt install npm ctags
-```
-
 Secondly remember to back up your original configuration files
 
 ```
