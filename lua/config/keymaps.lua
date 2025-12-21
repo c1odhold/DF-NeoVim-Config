@@ -116,3 +116,6 @@ keymap.set("i", "<C-f>", "*")
 
 -- 在普通模式下，用“cgn”来快速修改当前单词
 keymap.set("n", "cgv", "*Ncgn")
+
+-- 在普通模式下，用“<leader>+c+g+q”来记录宏
+keymap.set("n", "<leader>cgq", "q")
