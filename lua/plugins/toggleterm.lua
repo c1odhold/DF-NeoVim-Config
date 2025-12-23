@@ -19,7 +19,7 @@ return {
       },
       float_opts = {
         border = "single",
-        width = math.floor(vim.o.columns * 0.6),
+        width = math.floor(vim.o.columns * 0.9),
         height = math.floor(vim.o.lines * 0.9),
         winblend = 5,
         title_pos = "center",
