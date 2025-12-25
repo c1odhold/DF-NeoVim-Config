@@ -9,6 +9,6 @@ return {
       compat = {},
       default = { "lsp", "path", "buffer" },
     },
-    completion = { list = { selection = { preselect = false, auto_insert = false } } },
+    completion = { list = { selection = { preselect = true, auto_insert = false } } },
   },
 }
