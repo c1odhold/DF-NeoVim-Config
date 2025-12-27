@@ -1,5 +1,3 @@
--- 运行代码
-
 -- 定义一个映射表，key 是文件类型(或包含多个类型的 table)，value 是要绑定的命令
 -- 可以通过`echo &filetype`或者`lua= vim.bo.filetype`或者`lua print(vim.bo.filetype)`来获取当前打开文件的文件类型
 local keymaps = {

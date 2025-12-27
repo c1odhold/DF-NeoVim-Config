@@ -38,7 +38,7 @@ keymap.set("n", "<C-k>", "<cmd>resize -2<CR>")
 -- 在普通模式下，"x"键删除单个字符但不复制到寄存器
 keymap.set("n", "x", '"_x')
 -- 在普通模式下，"dd""删除当前行但不复制到寄存器
-keymap.set("n", "dd", "\"_dd")
+keymap.set("n", "dd", '"_dd')
 -- 在可视模式下，"d"删除选中内容但不复制到寄存器
 keymap.set("v", "d", '"_d')
 
@@ -57,6 +57,8 @@ keymap.set("n", "<S-Down>", "7j")
 keymap.set("n", "<S-Up>", "7k")
 keymap.set("v", "<S-Down>", "7j")
 keymap.set("v", "<S-Up>", "7k")
+keymap.set("n", "<S-Left>", "b")
+keymap.set("n", "<S-Right>", "w")
 
 -- 用“ctrl + 方向键（上或下）”来移动光标往上或往下3行
 keymap.set("i", "<S-Down>", "<Esc>3ja")
