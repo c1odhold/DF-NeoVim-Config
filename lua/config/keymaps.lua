@@ -5,10 +5,11 @@
 local keymap = vim.keymap
 
 -- 进入普通模式
-keymap.set("i", "aa", "<Esc>")
-keymap.set("v", "aa", "<Esc>")
+-- keymap.set("i", "aa", "<Esc>")
+-- keymap.set("v", "aa", "<Esc>")
 
 -- 进入插入模式
+keymap.set("n", "A", "a")
 keymap.set("n", "a", "i")
 
 -- 进入可视模式
@@ -24,10 +25,10 @@ keymap.set("n", "<leader><UP>", "<cmd>q<CR>")
 keymap.set("n", "<leader><Left>", "<cmd>q<CR>")
 
 -- 用"方向键"来移动光标到分割窗口
-keymap.set("n", "<C-Left>", "<C-w>h")
-keymap.set("n", "<C-Down>", "<C-w>j")
-keymap.set("n", "<C-Up>", "<C-w>k")
-keymap.set("n", "<C-Right>", "<C-w>l")
+keymap.set("n", "<M-Left>", "<C-w>h")
+keymap.set("n", "<M-Down>", "<C-w>j")
+keymap.set("n", "<M-Up>", "<C-w>k")
+keymap.set("n", "<M-Right>", "<C-w>l")
 
 -- 用"hjkl"来增减分割窗口的尺寸
 keymap.set("n", "<C-h>", "<cmd>vertical resize -2<CR>")
@@ -36,7 +37,7 @@ keymap.set("n", "<C-j>", "<cmd>resize +2<CR>")
 keymap.set("n", "<C-k>", "<cmd>resize -2<CR>")
 
 -- 在普通模式下，"x"键删除单个字符但不复制到寄存器
-keymap.set("n", "x", '"_x')
+-- keymap.set("n", "x", '"_x')
 -- 在普通模式下，"dd""删除当前行但不复制到寄存器
 keymap.set("n", "dd", '"_dd')
 -- 在可视模式下，"d"删除选中内容但不复制到寄存器
@@ -57,6 +58,7 @@ keymap.set("n", "<S-Down>", "7j")
 keymap.set("n", "<S-Up>", "7k")
 keymap.set("v", "<S-Down>", "7j")
 keymap.set("v", "<S-Up>", "7k")
+-- 用“shift + 方向键（左或右）”来移动光标到前一个单词开头或后一个单词开头
 keymap.set("n", "<S-Left>", "b")
 keymap.set("n", "<S-Right>", "w")
 
@@ -90,8 +92,8 @@ keymap.set("n", ".", "e")
 keymap.set("n", "<CR>", "o<Esc>")
 
 -- 在普通模式下，用“ctrl +或_”来跳转到页首或页尾
-keymap.set("n", "<C-=>", "gg")
-keymap.set("n", "<C-->", "G")
+-- keymap.set("n", "<C-=>", "gg")
+-- keymap.set("n", "<C-->", "G")
 
 -- 在普通模式下，用“-=”来全选
 keymap.set("n", "-=", "ggVG")
@@ -120,4 +122,4 @@ keymap.set("n", "cgv", "*Ncgn")
 
 -- 在普通模式下，禁用 q 宏
 keymap.set("n", "q", "<nop>")
-keymap.set("n", "Q", "q")
+-- keymap.set("n", "Q", "q")
