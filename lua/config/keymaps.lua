@@ -25,10 +25,10 @@ keymap.set("n", "<leader><UP>", "<cmd>q<CR>")
 keymap.set("n", "<leader><Left>", "<cmd>q<CR>")
 
 -- 用"方向键"来移动光标到分割窗口
-keymap.set("n", "<M-Left>", "<C-w>h")
-keymap.set("n", "<M-Down>", "<C-w>j")
-keymap.set("n", "<M-Up>", "<C-w>k")
-keymap.set("n", "<M-Right>", "<C-w>l")
+keymap.set("n", "<C-Left>", "<C-w>h")
+keymap.set("n", "<C-Down>", "<C-w>j")
+keymap.set("n", "<C-Up>", "<C-w>k")
+keymap.set("n", "<C-Right>", "<C-w>l")
 
 -- 用"hjkl"来增减分割窗口的尺寸
 keymap.set("n", "<C-h>", "<cmd>vertical resize -2<CR>")

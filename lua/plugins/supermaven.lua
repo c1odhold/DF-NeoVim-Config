@@ -12,7 +12,7 @@ return {
         accept_word = "<C-j>",
       },
       color = {
-        suggestion_color = "#d16dff",
+        suggestion_color = "pink",
         cterm = 213,
       },
       log_level = "off",                 -- set to "off" to disable logging completely
