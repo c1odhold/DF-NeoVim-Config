@@ -4,17 +4,9 @@
 
 local keymap = vim.keymap
 
--- 进入普通模式
--- keymap.set("i", "aa", "<Esc>")
--- keymap.set("v", "aa", "<Esc>")
-
 -- 进入插入模式
 keymap.set("n", "A", "a")
 keymap.set("n", "a", "i")
-
--- 进入可视模式
--- keymap.set("n", "<leader>3", "v")
--- keymap.set("i", "<leader>3", "<Esc>v")
 
 -- 用“主键 + 方向键（右或下）”来分割窗口
 keymap.set("n", "<leader><Right>", "<cmd>vsplit<CR>")
@@ -36,8 +28,6 @@ keymap.set("n", "<C-l>", "<cmd>vertical resize +2<CR>")
 keymap.set("n", "<C-j>", "<cmd>resize +2<CR>")
 keymap.set("n", "<C-k>", "<cmd>resize -2<CR>")
 
--- 在普通模式下，"x"键删除单个字符但不复制到寄存器
--- keymap.set("n", "x", '"_x')
 -- 在普通模式下，"dd""删除当前行但不复制到寄存器
 keymap.set("n", "dd", '"_dd')
 -- 在可视模式下，"d"删除选中内容但不复制到寄存器
