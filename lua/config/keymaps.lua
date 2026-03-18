@@ -67,8 +67,8 @@ keymap.set("i", "<S-BS>", "<C-w>")
 keymap.set("v", "<C-c>", '"+y')
 
 -- 用“ctrl + p”来粘贴系统剪贴板的内容
--- keymap.set("i", "<C-p>", '<cmd>set paste<CR>"+p')
--- keymap.set("n", "<C-p>", '<cmd>set paste<CR>"+p')
+keymap.set("i", "<C-p>", "<Esc>pa")
+keymap.set("n", "<C-p>", "p")
 
 -- 用“shift + tab”来缩进代码
 keymap.set("v", "<S-Tab>", "<gv")
@@ -89,9 +89,9 @@ keymap.set("n", "<CR>", "o<Esc>")
 keymap.set("n", "-=", "ggVG")
 
 -- 在普通模式下，用"<leader>z"来redo恢复
-keymap.set("n", "<leader>z", "<cmd>redo<CR>")
+keymap.set("n", "<M-z>", "<cmd>redo<CR>")
 -- 在普通模式下，用“u”来undo撤销
-keymap.set("n", "u", "<cmd>undo<CR>")
+keymap.set("n", "<M-u>", "<cmd>undo<CR>")
 
 -- 在普通模式下，用“ctrl + /”在当前文件目录下打开终端
 -- keymap.set("n", "<C-/>", "<cmd>terminal<CR>")
@@ -99,6 +99,14 @@ keymap.set("n", "u", "<cmd>undo<CR>")
 -- 用“<leader> + 回车键”来格式化代码
 keymap.set("n", "<leader><CR>", "<cmd>lua vim.lsp.buf.format()<CR>")
 keymap.set("i", "<leader><CR>", "<cmd>lua vim.lsp.buf.format()<CR>")
+
+-- 用“<leader><leader>”来搜索家目录下的文件
+keymap.set("n", "<leader><leader>", function()
+  Snacks.picker.files({
+    cwd = vim.fn.expand("~"),
+    hidden = true,
+  })
+end, { desc = "Find Files (Home)" })
 
 -- 在普通模式下，用“ctrl + f”来查找单词并跳转到定义
 -- keymap.set("n", "<C-f>", "<cmd>lua vim.lsp.buf.definition()<CR>")
